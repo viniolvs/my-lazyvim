@@ -1,3 +1,4 @@
+local run = require("plenary.run")
 return {
   -- Multiple cursors
   {
@@ -64,5 +65,11 @@ return {
     config = function()
       require("drop").setup()
     end,
+  },
+
+  --Markdown preview
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = { "markdown" },
   },
 }
