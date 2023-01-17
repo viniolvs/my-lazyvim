@@ -1,4 +1,3 @@
-local run = require("plenary.run")
 return {
   -- Multiple cursors
   {
@@ -48,6 +47,7 @@ return {
   -- Zen Mode
   {
     "folke/zen-mode.nvim",
+    lazy = false,
     config = function()
       require("zen-mode").setup({
         -- your configuration comes here
@@ -70,6 +70,16 @@ return {
   --Markdown preview
   {
     "iamcco/markdown-preview.nvim",
+    lazy = false,
     ft = { "markdown" },
+  },
+
+  -- Markdown mappings
+  {
+    "antonk52/markdowny.nvim",
+    lazy = false,
+    config = function()
+      require("markdowny").setup({ filetypes = { "markdown" } })
+    end,
   },
 }
