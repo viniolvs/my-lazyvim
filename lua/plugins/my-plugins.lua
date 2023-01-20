@@ -39,6 +39,7 @@ return {
           nls.builtins.formatting.black,
           nls.builtins.formatting.stylua,
           nls.builtins.diagnostics.flake8,
+          nls.builtins.formatting.clang_format,
         },
       }
     end,
