@@ -1,4 +1,15 @@
 return {
+  -- nvim-cmp
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.mapping = cmp.mapping.preset.insert({
+        ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
+      })
+    end,
+  },
+
   -- Multiple cursors
   {
     "mg979/vim-visual-multi",
