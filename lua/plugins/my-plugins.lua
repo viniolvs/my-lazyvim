@@ -4,6 +4,7 @@ return {
     "folke/tokyonight.nvim",
     opts = { transparent = true },
   },
+
   -- nvim-cmp
   {
     "hrsh7th/nvim-cmp",
