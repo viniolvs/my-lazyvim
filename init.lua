@@ -7,3 +7,6 @@ require("plugins.toggleterm")
 
 -- Disabled LazyVim plugins
 require("plugins.disabled")
+
+-- colorscheme
+vim.cmd([[colorscheme dracula]])

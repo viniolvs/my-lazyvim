@@ -1,8 +1,14 @@
 return {
-  -- Transparency
+  -- Colorscheme
   {
-    "folke/tokyonight.nvim",
-    opts = { transparent = true },
+    "Mofiqul/dracula.nvim",
+    lazy = false,
+    config = function()
+      require("dracula").setup({
+        transparent_bg = true,
+        italic_comment = true,
+      })
+    end,
   },
 
   -- nvim-cmp
