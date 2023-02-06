@@ -118,18 +118,4 @@ return {
       require("markdowny").setup({ filetypes = { "markdown" } })
     end,
   },
-
-  --ChatGpt
-  {
-    "jackMort/ChatGPT.nvim",
-    lazy = false,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      require("chatgpt").setup()
-    end,
-  },
 }

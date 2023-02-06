@@ -9,5 +9,5 @@ vim.api.nvim_set_keymap("i", "<C-c>", 'copilot#Accept("<CR>")', { silent = true,
 -- notify keymap
 vim.api.nvim_set_keymap("n", "<leader>ut", ":Telescope notify<CR>", { silent = true, noremap = true })
 
--- ChatGPT keymap
-vim.api.nvim_set_keymap("n", "<leader>gp", ":ChatGPT<CR>", { silent = true, noremap = true })
+-- Toggle all terminal windows
+vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTermToggleAll<CR>", { silent = true, noremap = true })
