@@ -22,6 +22,12 @@ return {
     end,
   },
 
+  -- Copilot
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
+
   -- Multiple cursors
   {
     "mg979/vim-visual-multi",
