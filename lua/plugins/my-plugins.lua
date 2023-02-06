@@ -11,6 +11,12 @@ return {
     end,
   },
 
+  -- Notify
+  {
+    "rcarriga/nvim-notify",
+    opts = { background_colour = "#000000", lazy = false },
+  },
+
   -- nvim-cmp
   {
     "hrsh7th/nvim-cmp",
