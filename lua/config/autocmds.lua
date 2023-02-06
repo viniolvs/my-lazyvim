@@ -15,6 +15,10 @@ vim.g.node_host_prog = home_dir .. node_bin .. "/node"
 -- (handled by :Mason currently)
 vim.cmd("let $PATH = '" .. home_dir .. node_bin .. ":' . $PATH")
 
+-- Fix for clangd
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.offsetEncoding = { "utf-16" }
 require("lspconfig").clangd.setup({ capabilities = capabilities })
+
+-- Load notify
+require("telescope").load_extension("notify")

@@ -4,4 +4,7 @@
 
 --Copilot keymap
 vim.g.copilot_no_tab_map = true
-vim.api.nvim_set_keymap("i", "<C-c>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+-- notify keymap
+vim.api.nvim_set_keymap("n", "<leader>ut", ":Telescope notify<CR>", { silent = true, noremap = true })
