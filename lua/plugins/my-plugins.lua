@@ -31,6 +31,12 @@ return {
       opts.mapping = cmp.mapping.preset.insert({
         ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
       })
+      opts.window = {
+        completion = cmp.config.window.bordered({
+          border = "rounded",
+          winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+        }),
+      }
     end,
   },
 
