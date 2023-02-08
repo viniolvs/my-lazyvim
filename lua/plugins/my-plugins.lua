@@ -37,6 +37,17 @@ return {
           winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
         }),
       }
+      opts.sources = cmp.config.sources({
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "path" },
+        {
+          name = "buffer",
+          opts = {
+            keyword_pattern = [[\k\+]],
+          },
+        },
+      })
     end,
   },
 
