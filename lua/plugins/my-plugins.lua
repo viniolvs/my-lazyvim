@@ -11,6 +11,12 @@ return {
     end,
   },
 
+  -- lualine
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = { extensions = { "toggleterm" } },
+  },
+
   -- Notify
   {
     "rcarriga/nvim-notify",
