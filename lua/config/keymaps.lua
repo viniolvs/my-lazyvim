@@ -10,7 +10,14 @@ vim.api.nvim_set_keymap("i", "<C-c>", 'copilot#Accept("<CR>")', { silent = true,
 vim.api.nvim_set_keymap("n", "<leader>ut", ":Telescope notify<CR>", { silent = true, noremap = true })
 
 -- Toggle all terminal windows
-vim.api.nvim_set_keymap("n", "<leader>t", ":ToggleTermToggleAll<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTermToggleAll<CR>", { silent = true, noremap = true })
+
+-- TrailBlazer keymaps
+vim.api.nvim_set_keymap("n", "<leader>tn", ":TrailBlazerNewTrailMark<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>tb", ":TrailBlazerTrackBack<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>t[", ":TrailBlazerPeekMovePreviousUp<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>t]", ":TrailBlazerPeekMoveNextDown<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>td", ":TrailBlazerDeleteAllTrailMarks<CR>", { silent = true, noremap = true })
 
 -- Togle terminal windows
 function _G.set_terminal_keymaps()

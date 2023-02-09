@@ -141,4 +141,15 @@ return {
       require("markdowny").setup({ filetypes = { "markdown" } })
     end,
   },
+
+  -- Trailblazer
+  {
+    "LeonHeidelbach/trailblazer.nvim",
+    lazy = false,
+    config = function()
+      require("trailblazer").setup({
+        -- your custom config goes here
+      })
+    end,
+  },
 }
