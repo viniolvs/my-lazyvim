@@ -117,14 +117,14 @@ return {
   },
 
   -- Screen saver
-  {
-    "folke/drop.nvim",
-    event = "VimEnter",
-    lazy = false,
-    config = function()
-      require("drop").setup()
-    end,
-  },
+  -- {
+  --   "folke/drop.nvim",
+  --   event = "VimEnter",
+  --   enable = false,
+  --   config = function()
+  --     require("drop").setup()
+  --   end,
+  -- },
 
   --Markdown preview
   {
