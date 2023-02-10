@@ -11,6 +11,59 @@ return {
     end,
   },
 
+  -- Modicator
+  {
+    "mawkler/modicator.nvim",
+    dependencies = "Mofiqul/dracula.nvim", -- Add your colorscheme plugin here,
+    lazy = false,
+    init = function()
+      -- These are required for Modicator to work
+      vim.o.cursorline = true
+      vim.o.number = true
+      vim.o.termguicolors = true
+    end,
+    config = function()
+      local modicator = require("modicator")
+      local colors = require("dracula").colors()
+      modicator.setup({
+        highlights = {
+          defaults = {
+            bold = true,
+          },
+          modes = {
+            ["n"] = {
+              foreground = colors.purple,
+            },
+            ["i"] = {
+              foreground = colors.green,
+            },
+            ["v"] = {
+              foreground = colors.yellow,
+            },
+            ["V"] = {
+              foreground = colors.yellow,
+            },
+            ["�"] = { -- This symbol is the ^V character
+              foreground = colors.yellow,
+            },
+            ["s"] = {
+              foreground = colors.orange,
+            },
+            ["S"] = {
+              foreground = colors.orange,
+            },
+            ["R"] = {
+              foreground = colors.red,
+            },
+            ["c"] = {
+              foreground = colors.orange,
+            },
+          },
+        },
+      })
+    end,
+  },
+
   -- lualine
   {
     "nvim-lualine/lualine.nvim",
