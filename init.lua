@@ -9,4 +9,5 @@ require("plugins.toggleterm")
 require("plugins.disabled")
 
 -- colorscheme
-vim.cmd([[colorscheme dracula]])
+-- vim.cmd([[colorscheme dracula]])
+vim.cmd([[colorscheme catppuccin-macchiato]])

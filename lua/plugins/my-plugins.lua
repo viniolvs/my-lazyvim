@@ -11,6 +11,18 @@ return {
     end,
   },
 
+  -- Colorscheme
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    config = function()
+      require("catppuccin").setup({
+        flavour = "macchiato",
+      })
+    end,
+  },
+
   -- Modicator
   {
     "mawkler/modicator.nvim",
@@ -24,7 +36,8 @@ return {
     end,
     config = function()
       local modicator = require("modicator")
-      local colors = require("dracula").colors()
+      -- local colors = require("dracula").colors()
+      local colors = require("catppuccin.palettes").get_palette("macchiato")
       modicator.setup({
         highlights = {
           defaults = {
@@ -32,19 +45,19 @@ return {
           },
           modes = {
             ["n"] = {
-              foreground = colors.purple,
+              foreground = colors.blue,
             },
             ["i"] = {
               foreground = colors.green,
             },
             ["v"] = {
-              foreground = colors.yellow,
+              foreground = colors.mauve,
             },
             ["V"] = {
-              foreground = colors.yellow,
+              foreground = colors.mauve,
             },
             ["�"] = { -- This symbol is the ^V character
-              foreground = colors.yellow,
+              foreground = colors.mauve,
             },
             ["s"] = {
               foreground = colors.orange,
