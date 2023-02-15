@@ -212,4 +212,15 @@ return {
       })
     end,
   },
+
+  -- idk
+  {
+    "giusgad/pets.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "edluffy/hologram.nvim" },
+    config = function()
+      require("pets").setup({
+        -- your custom config goes here
+      })
+    end,
+  },
 }
