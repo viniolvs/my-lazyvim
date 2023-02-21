@@ -9,15 +9,15 @@ return {
         shade_terminals = true,
         insert_mappings = true,
         persist_size = true,
-        direction = "horizontal",
-        -- float_opts = {
-        --   border = "curved",
-        --   winblend = 0,
-        --   highlights = {
-        --     border = "Normal",
-        --     background = "Normal",
-        --   },
-        -- },
+        direction = "float",
+        float_opts = {
+          border = "curved",
+          winblend = 3,
+          highlights = {
+            border = "Normal",
+            background = "Normal",
+          },
+        },
       })
     end,
   },
