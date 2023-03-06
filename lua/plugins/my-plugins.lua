@@ -86,24 +86,24 @@ return {
   -- nvim-cmp
   {
     "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
+    option = function(_, option)
       local cmp = require("cmp")
-      opts.mapping = cmp.mapping.preset.insert({
+      option.mapping = cmp.mapping.preset.insert({
         ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
       })
-      opts.window = {
+      option.window = {
         completion = cmp.config.window.bordered({
           border = "rounded",
           winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
         }),
       }
-      opts.sources = cmp.config.sources({
+      option.sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
         {
           name = "buffer",
-          opts = {
+          option = {
             keyword_pattern = [[\k\+]],
           },
         },
