@@ -202,17 +202,6 @@ return {
     end,
   },
 
-  -- Trailblazer
-  {
-    "LeonHeidelbach/trailblazer.nvim",
-    lazy = false,
-    config = function()
-      require("trailblazer").setup({
-        -- your custom config goes here
-      })
-    end,
-  },
-
   -- idk
   {
     "giusgad/pets.nvim",
