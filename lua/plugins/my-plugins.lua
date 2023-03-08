@@ -23,6 +23,15 @@ return {
     end,
   },
 
+  -- Harpoon
+  {
+    "ThePrimeagen/harpoon",
+    lazy = false,
+    config = function()
+      require("harpoon").setup({})
+    end,
+  },
+
   -- Modicator
   {
     "mawkler/modicator.nvim",
@@ -30,7 +39,6 @@ return {
     lazy = false,
     config = function()
       local modicator = require("modicator")
-      -- local colors = require("dracula").colors()
       local colors = require("catppuccin.palettes").get_palette("macchiato")
       modicator.setup({
         highlights = {
@@ -86,24 +94,24 @@ return {
   -- nvim-cmp
   {
     "hrsh7th/nvim-cmp",
-    option = function(_, option)
+    opts = function(_, opts)
       local cmp = require("cmp")
-      option.mapping = cmp.mapping.preset.insert({
+      opts.mapping = cmp.mapping.preset.insert({
         ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
       })
-      option.window = {
+      opts.window = {
         completion = cmp.config.window.bordered({
           border = "rounded",
           winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
         }),
       }
-      option.sources = cmp.config.sources({
+      opts.sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
         {
           name = "buffer",
-          option = {
+          opts = {
             keyword_pattern = [[\k\+]],
           },
         },

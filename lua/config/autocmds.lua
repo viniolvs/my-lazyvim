@@ -20,5 +20,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.offsetEncoding = { "utf-16" }
 require("lspconfig").clangd.setup({ capabilities = capabilities })
 
--- Load notify
+-- Load telescope notify
 require("telescope").load_extension("notify")
+
+-- Load telescope harpoon
+require("telescope").load_extension("harpoon")

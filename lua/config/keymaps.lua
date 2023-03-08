@@ -1,6 +1,34 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+--
+
+-- Harpoon
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ht",
+  ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
+  { silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ha",
+  ":lua require('harpoon.mark').add_file()<CR>",
+  { silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>hn",
+  ":lua require('harpoon.ui').nav_next()<CR>",
+  { silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>hp",
+  ":lua require('harpoon.ui').nav_prev()<CR>",
+  { silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap("n", "<leader>uh", ":Telescope harpoon marks<CR>", { silent = true, noremap = true })
 
 -- replace with yanked text
 vim.api.nvim_set_keymap("n", "<leader>p", '"0p', { silent = true, noremap = true })
