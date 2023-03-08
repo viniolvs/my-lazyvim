@@ -1,5 +1,5 @@
+-- Add LazyVim disabled plugins here
 return {
-  -- Add LazyVim disabled plugins here
   -- Colorscheme
   {
     "folke/tokyonight.nvim",
