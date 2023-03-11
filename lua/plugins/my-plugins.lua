@@ -210,6 +210,19 @@ return {
     end,
   },
 
+  -- Colorizer
+  {
+    "norcalli/nvim-colorizer.lua",
+    lazy = false,
+    config = function()
+      require("colorizer").setup({
+        "*",
+      }, {
+        mode = "background",
+      })
+    end,
+  },
+
   -- idk
   {
     "giusgad/pets.nvim",
