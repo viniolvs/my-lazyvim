@@ -33,3 +33,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 })
+
+-- Load sqls
+require("lspconfig").sqls.setup({
+  cmd = { "sqls", "-config", "/home/vinicius/.config/sqls/config.yml" },
+})
