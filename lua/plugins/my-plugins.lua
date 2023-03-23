@@ -18,7 +18,23 @@ return {
     lazy = false,
     config = function()
       require("catppuccin").setup({
-        flavour = "macchiato",
+        flavour = "mocha",
+        transparent_background = false,
+        show_end_od_buffer = true,
+        dim_inactive = {
+          enabled = true,
+          shade = "dark",
+          percentage = 0.20,
+        },
+        integrations = {
+          notify = true,
+          mini = true,
+          harpoon = true,
+          leap = true,
+          noice = true,
+          cmp = true,
+          ts_rainbow = true,
+        },
       })
     end,
   },
