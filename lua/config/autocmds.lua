@@ -25,3 +25,11 @@ require("telescope").load_extension("notify")
 
 -- Load telescope harpoon
 require("telescope").load_extension("harpoon")
+
+-- Disable autoformat on sql files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "sql" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
