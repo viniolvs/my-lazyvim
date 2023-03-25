@@ -250,6 +250,21 @@ return {
     end,
   },
 
+  -- plugin to open links
+  {
+    "chrishrb/gx.nvim",
+    event = { "BufEnter" },
+    -- you can specify also another config if you want
+    config = function()
+      require("gx").setup({
+        handlers = {
+          plugin = true, -- open plugin links in lua (e.g. packer, lazy, ..)
+          github = true, -- open github issues
+        },
+      })
+    end,
+  },
+
   -- idk
   {
     "giusgad/pets.nvim",
