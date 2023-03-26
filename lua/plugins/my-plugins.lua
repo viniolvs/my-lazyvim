@@ -277,7 +277,7 @@ return {
   -- navbuddy
   {
     "SmiteshP/nvim-navbuddy",
-    event = { "BufEnter" },
+    ft = { "c", "cpp", "java", "python", "typescript", "typescriptreact", "javascript" },
     dependencies = {
       "neovim/nvim-lspconfig",
       "SmiteshP/nvim-navic",
