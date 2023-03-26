@@ -156,13 +156,13 @@ return {
   {
     "mg979/vim-visual-multi",
     branch = "master",
-    lazy = false,
+    event = "BufEnter",
   },
 
   -- Rainbow parentheses
   {
     "mrjones2014/nvim-ts-rainbow",
-    lazy = false,
+    event = "BufReadPre",
     config = function()
       require("nvim-treesitter.configs").setup({
         rainbow = {
@@ -177,7 +177,7 @@ return {
   -- Java config
   {
     "mfussenegger/nvim-jdtls",
-    lazy = false,
+    ft = { "java" },
   },
 
   -- formatters
@@ -201,7 +201,7 @@ return {
   -- Zen Mode
   {
     "folke/zen-mode.nvim",
-    lazy = false,
+    event = "VimEnter",
     config = function()
       require("zen-mode").setup({
         -- your configuration comes here
@@ -224,14 +224,13 @@ return {
   --Markdown preview
   {
     "iamcco/markdown-preview.nvim",
-    lazy = false,
     ft = { "markdown" },
   },
 
   -- Markdown mappings
   {
     "antonk52/markdowny.nvim",
-    lazy = false,
+    ft = { "markdown" },
     config = function()
       require("markdowny").setup({ filetypes = { "markdown" } })
     end,
@@ -240,7 +239,17 @@ return {
   -- Colorizer
   {
     "norcalli/nvim-colorizer.lua",
-    lazy = false,
+    ft = {
+      "css",
+      "html",
+      "javascript",
+      "javascriptreact",
+      "lua",
+      "markdown",
+      "scss",
+      "typescript",
+      "typescriptreact",
+    },
     config = function()
       require("colorizer").setup({
         "*",
@@ -265,6 +274,7 @@ return {
     end,
   },
 
+  -- navbuddy
   {
     "SmiteshP/nvim-navbuddy",
     event = { "BufEnter" },
