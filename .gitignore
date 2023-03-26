@@ -8,3 +8,4 @@ foo.*
 data
 .neoconf.json
 lazy-lock.json
+lib/java/jdt-language-server-1.18.0-202212011657/plugins/*
