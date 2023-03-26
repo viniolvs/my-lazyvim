@@ -62,4 +62,4 @@ vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 vim.cmd("autocmd FileType markdown nmap <leader>mp :MarkdownPreview<CR>")
 
 -- NavBuddy
-vim.api.nvim_set_keymap("n", "<leader>n", ":NavBuddy<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>n", ":Navbuddy<CR>", { silent = true, noremap = true })
