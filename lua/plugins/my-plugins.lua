@@ -265,6 +265,24 @@ return {
     end,
   },
 
+  {
+    "SmiteshP/nvim-navbuddy",
+    event = { "BufEnter" },
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "SmiteshP/nvim-navic",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      local navbuddy = require("nvim-navbuddy")
+      navbuddy.setup({
+        lsp = {
+          auto_attach = true,
+        },
+      })
+    end,
+  },
+
   -- idk
   {
     "giusgad/pets.nvim",

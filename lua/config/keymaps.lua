@@ -34,6 +34,8 @@ vim.api.nvim_set_keymap("n", "<leader>uh", ":Telescope harpoon marks<CR>", { sil
 
 -- replace with yanked text
 vim.api.nvim_set_keymap("n", "<leader>p", '"0p', { silent = true, noremap = true })
+-- delete without yanking
+vim.api.nvim_set_keymap("n", "<leader>d", '"_d', { silent = true, noremap = true })
 
 --Copilot keymap
 vim.g.copilot_no_tab_map = true
@@ -58,3 +60,6 @@ vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 -- Markdown Preview
 vim.cmd("autocmd FileType markdown nmap <leader>mp :MarkdownPreview<CR>")
+
+-- NavBuddy
+vim.api.nvim_set_keymap("n", "<leader>n", ":NavBuddy<CR>", { silent = true, noremap = true })
