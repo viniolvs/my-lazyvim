@@ -39,6 +39,12 @@ return {
     end,
   },
 
+  -- tmux navigator
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+
   -- Harpoon
   {
     "ThePrimeagen/harpoon",
@@ -291,6 +297,15 @@ return {
           auto_attach = true,
         },
       })
+    end,
+  },
+
+  -- markdown notes for projects
+  {
+    "JellyApple102/flote.nvim",
+    event = "BufReadPre",
+    config = function()
+      require("flote").setup()
     end,
   },
 
