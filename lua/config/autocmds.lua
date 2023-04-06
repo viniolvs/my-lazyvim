@@ -35,10 +35,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 -- Load lspkind
---  sqls
-require("lspconfig").sqls.setup({
-  cmd = { "sqls", "-config", "~/.config/sqls/config.yml" },
-})
+-- sqlls
+require("lspconfig").sqlls.setup({})
+
 -- prolog_lsp
 require("lspconfig.prolog_lsp")
 require("lspconfig").prolog_lsp.setup({})
