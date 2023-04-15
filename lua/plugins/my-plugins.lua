@@ -130,7 +130,7 @@ return {
       opts.window = {
         completion = cmp.config.window.bordered({
           border = "rounded",
-          winhighlight = "Normal:EndOfBuffer,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+          winhighlight = "Normal:EndOfBuffer,FloatBorder:Operator,CursorLine:BufferLineInfoSelected,Search:None",
         }),
       }
       opts.sources = cmp.config.sources({
