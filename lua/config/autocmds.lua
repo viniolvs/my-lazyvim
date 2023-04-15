@@ -41,3 +41,9 @@ require("lspconfig").sqlls.setup({})
 -- prolog_lsp
 require("lspconfig.prolog_lsp")
 require("lspconfig").prolog_lsp.setup({})
+
+-- cssls
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+require("lspconfig").cssls.setup({
+  capabilities = capabilities,
+})
