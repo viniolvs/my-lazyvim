@@ -230,7 +230,7 @@ return {
     event = "VimEnter",
     lazy = false,
     config = function()
-      require("drop").setup()
+      require("drop").setup({ theme = "snow" })
     end,
   },
 
