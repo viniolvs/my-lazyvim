@@ -8,3 +8,4 @@ foo.*
 data
 .neoconf.json
 lazy-lock.json
+lib/java/
