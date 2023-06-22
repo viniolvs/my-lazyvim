@@ -39,6 +39,16 @@ return {
     end,
   },
 
+  -- mini.files
+  {
+    "echasnovski/mini.files",
+    version = false,
+    lazy = false,
+    config = function()
+      require("mini.files").setup()
+    end,
+  },
+
   -- Notify
   {
     "rcarriga/nvim-notify",
