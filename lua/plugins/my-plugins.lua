@@ -221,16 +221,30 @@ return {
     end,
   },
 
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "simrat39/rust-tools.nvim",
+    },
+    opts = {
+      servers = {
+        rust_analyzer = {},
+      },
+      setup = {
+        rust_analyzer = function(_, opts)
+          require("rust-tools").setup({ server = opts })
+          return true
+        end,
+      },
+    },
+  },
+
   -- Zen Mode
   {
     "folke/zen-mode.nvim",
     event = "VimEnter",
     config = function()
-      require("zen-mode").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      })
+      require("zen-mode").setup({})
     end,
   },
 
