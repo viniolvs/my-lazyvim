@@ -342,11 +342,18 @@ return {
   -- idk
   {
     "giusgad/pets.nvim",
+    lazy = false,
     dependencies = { "MunifTanjim/nui.nvim", "edluffy/hologram.nvim" },
     config = function()
-      require("pets").setup({
-        -- your custom config goes here
-      })
+      require("pets").setup({})
+    end,
+  },
+  --
+  {
+    "meatballs/notebook.nvim",
+    lazy = false,
+    config = function()
+      require("notebook").setup({})
     end,
   },
 }
