@@ -215,28 +215,9 @@ return {
           nls.builtins.formatting.stylua,
           nls.builtins.diagnostics.flake8,
           nls.builtins.formatting.prettierd,
-          nls.builtins.formatting.rustfmt,
         },
       }
     end,
-  },
-
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "simrat39/rust-tools.nvim",
-    },
-    opts = {
-      servers = {
-        rust_analyzer = {},
-      },
-      setup = {
-        rust_analyzer = function(_, opts)
-          require("rust-tools").setup({ server = opts })
-          return true
-        end,
-      },
-    },
   },
 
   -- Zen Mode
