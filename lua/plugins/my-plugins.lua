@@ -230,14 +230,14 @@ return {
   },
 
   -- Screen saver
-  {
-    "folke/drop.nvim",
-    event = "VimEnter",
-    lazy = false,
-    config = function()
-      require("drop").setup({ theme = "snow" })
-    end,
-  },
+  -- {
+  --   "folke/drop.nvim",
+  --   event = "VimEnter",
+  --   lazy = false,
+  --   config = function()
+  --     require("drop").setup({ theme = "snow" })
+  --   end,
+  -- },
 
   --Markdown preview
   {
