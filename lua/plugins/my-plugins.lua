@@ -173,7 +173,7 @@ return {
     event = "BufEnter",
     config = function()
       -- Change '<C-g>' here to any keycode you like.
-      vim.keymap.set("i", "<C-i>", function()
+      vim.keymap.set("i", "<C-a>", function()
         return vim.fn["codeium#Accept"]()
       end, { expr = true })
       vim.keymap.set("i", "<c-;>", function()
